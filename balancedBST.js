@@ -57,6 +57,11 @@ class Tree {
   }
 
   insert(value) {
+    if (this.root === null) {
+      this.root = new Node(value);
+      return;
+    }
+
     let cur = this.root;
 
     while (cur != null) {
